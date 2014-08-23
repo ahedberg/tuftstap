@@ -214,3 +214,7 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 handlebars-v1.3.0.js
+deps/backbone.js
+deps/underscore.js
+*.jpg
+*.png
