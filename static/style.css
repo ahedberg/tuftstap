@@ -1,69 +1,32 @@
 /*STYLE SHEET - You probably don't want to mess with this unless you know what you're doing.*/
 
 body {
-background-image:url('background.png');
-font-size:100%;
-}
-
-h1 {
-font-family: Verdana, Geneva, sans-serif;
-color:#417dc1;
-text-align:center;
-font-size:2em;
+	background-image: url('background.png');
 }
 
 p, li, td {
-font-family: Verdana, Geneva, sans-serif;
-color:#300f00;
-text-align:left;
+	font-family: Verdana, Geneva, sans-serif;
+	color: #300f00;
+	text-align: left;
 }
 
 a:link, a:visited {
-color:#417dc1;
-text-decoration:none;
+	color: #417dc1;
+	text-decoration: none;
 }
 
 a:hover, a:active {
-color:#417dc1;
-text-decoration:underline;
+	color: #417dc1;
+	text-decoration: underline;
 }
 
-table {
-border:0px;
+.col-center {
+	float: none;
+	margin: 0 auto;
+	margin-bottom: 1%;
+	margin-top: 1%;
 }
 
-td {
-border:0px;
-vertical-align:top;
-padding:5px;
-}
-
-div {
-margin-left:auto;
-margin-right:auto;
-width:1024px;
-padding:5px;
-background-color:#ffffff;
-}
-
-#header {
-height:238px;
-border:2px solid #300f00;
-}
-
-#nav {
-border-left:2px solid #300f00;
-border-right:2px solid #300f00;
-border-bottom:2px solid #300f00;
-}
-
-#content {
-border-left:2px solid #300f00;
-border-right:2px solid #300f00;
-background-color:#ffffff;
-}
-
-#footer {
-height:105px;
-border:2px solid #300f00;
+.local-container {
+	margin: 2%;
 }
