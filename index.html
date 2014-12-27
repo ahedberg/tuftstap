@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<title>Tufts Tap Ensemble</title>
-		
+
 		<!-- Stylesheets -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" type="text/css" href="static/style.css" />
-		
+
 		<!-- Search engine/analytic stuff -->
 		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 		<meta name="keywords" content="Tufts Tap Ensemble,Tufts University,dance,tap" />
@@ -23,7 +23,7 @@
 				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			})();
-		</script>		
+		</script>
 </head>
 
 	<body>
@@ -38,16 +38,10 @@
 							<li>{{#link-to 'alumni'}}alumni{{/link-to}}</li>
 							<li>{{#link-to 'video'}}video{{/link-to}}</li>
 						</ul>
-						
-						<!--<h1>
-							<span style="color:#300f00">home</span> | 
-							<a href="members.html">members</a> | 
-							<a href="alumnae.html">alumnae</a> | 
-							<a href="video.html">video</a>
-						</h1>-->
+
 					</div>
 				</div>
-		
+
 				<div class="row">
 					<div id="content" class="col-md-10 panel col-center">
 						<!-- content will be rendered here -->
@@ -55,20 +49,20 @@
 				</div>
 			</div>
 		</script>
-		
+
 		<!-- main page template -->
 		<script type="text/x-handlebars" data-template-name="main">
 			<p>Welcome to the Tufts Tap Ensemble website! We are the only dance group at Tufts devoted to tap dancing. Each semester, we stage
-				a show featuring a variety of pieces which are choreographed, taught, and performed by students. Our shows are open to Tufts 
-				students and performed on campus. We are active within the Tufts dance community, guest-performing in shows for Sarabande, 
+				a show featuring a variety of pieces which are choreographed, taught, and performed by students. Our shows are open to Tufts
+				students and performed on campus. We are active within the Tufts dance community, guest-performing in shows for Sarabande,
 				BEATs, and the Amalgamates. We are also active in the greater Boston area and have performed with tappers from Boston
 				University, Brandeis, Harvard, and Wellesley.</p>
-		
-			<p>Auditions for Tap Ensemble are held each semester. Prior tap experience is necessary to join, but we offer student-run 
-				workshops for anyone who wishes to learn. If you have any questions about our group, contact the Tap Ensemble directly at 
-				tuftstap [at] gmail [dot] com.</p>	
+
+			<p>Auditions for Tap Ensemble are held each semester. Prior tap experience is necessary to join, but we offer student-run
+				workshops for anyone who wishes to learn. If you have any questions about our group, contact the Tap Ensemble directly at
+				tuftstap [at] gmail [dot] com.</p>
 		</script>
-		
+
 		<script type="text/x-handlebars" data-template-name="members">
 			{{#each}}
 				{{openRow _view.contentIndex}}
@@ -89,7 +83,7 @@
 				{{closeRow _view.contentIndex}}
 			{{/each}}
 		</script>
-		
+
 		<script type="text/x-handlebars" data-template-name="alumni">
 			{{#each}}
 			<div class="row">
@@ -115,9 +109,11 @@
 			</div>
 			{{/each}}
 		</script>
-		
+
 		<script type="text/x-handlebars" data-template-name="video">
-			
+			<div id="videoDiv"></div>
+			<script src="js/videos.js"></script>
+			<script src="https://apis.google.com/js/client.js?onload=onLoadCallback"></script>
 		</script>
 
 		<!-- JavaScript Dependencies -->
