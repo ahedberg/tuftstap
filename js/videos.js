@@ -5,13 +5,16 @@ var CHANNEL_ID = 'UCwVmYIaSebiCamxAxR4zYwQ';
 var NUM_RESULTS = 50;
 
 function onLoadCallback() {
+  console.log('got to callback');
   gapi.client.setApiKey(API_KEY);
-  gapi.client.load('youtube', 'v3').then(function() {console.log('loaded')});
+  gapi.client.load('youtube', 'v3', function() {console.log('loaded')});
   loadVideos();
 }
 
 function loadVideos() {
-  gapi.client.youtube.playlists.list({'part': 'id', 'channelId': CHANNEL_ID}).then(
+  var request = gapi.client.youtube.playlists.list({part: 'id', channelId: CHANNEL_ID});
+  console.log('executing request...');
+  request.execute(
     function(resp) {
       var container = document.getElementById('videoDiv');
       for (var item in resp.items) {

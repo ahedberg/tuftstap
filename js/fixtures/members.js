@@ -1,16 +1,5 @@
 // Data for the members page. Displayed by last name.
 App.Member.FIXTURES = [
-   	{
-   		id: 1,
-		firstName: "Rachelle",
-		lastName: "Alfred",
-		year: 2015,
-		school: "Arts & Sciences",
-		imageUrl: "static/members/alfred.jpg",
-		major: "Clinical Psychology",
-		secondMajor: "Child Development",
-		minor: ""
-	},
 	{
    		id: 2,
 		firstName: "Alexandra",
@@ -88,17 +77,7 @@ App.Member.FIXTURES = [
 		secondMajor: "",
 		minor: ""
 	},
-	{
-   		id: 9,
-		firstName: "Sara",
-		lastName: "Pantel",
-		year: 2015,
-		school: "Arts & Sciences",
-		imageUrl: "static/members/pantel.jpg",
-		major: "Spanish",
-		secondMajor: "Biology",
-		minor: ""
-	},
+
 	{
    		id: 10,
 		firstName: "Abby",

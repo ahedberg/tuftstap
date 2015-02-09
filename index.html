@@ -30,6 +30,16 @@
 		<!-- application template - this is displayed on every page -->
 		<script type="text/x-handlebars">
 			<div class="container-fluid local-container">
+
+				<div class="row">
+					<div class="col-md-10 panel col-center">
+						<div class="row">
+							<div class="col-md-4 vcenter"><img class="img-responsive" src="static/logo.jpg" /></div><!-- don't delete this comment
+							--><div class="col-md-8 vcenter"><img class="img-responsive" src="static/group.jpg" /></div>
+						</div>
+					</div>
+				</div>
+
 				<div class="row">
 					<div class="col-md-10 panel col-center">
 						<ul class="nav nav-pills nav-justified">
@@ -38,7 +48,6 @@
 							<li>{{#link-to 'alumni'}}alumni{{/link-to}}</li>
 							<li>{{#link-to 'video'}}video{{/link-to}}</li>
 						</ul>
-
 					</div>
 				</div>
 
@@ -46,28 +55,33 @@
 					<div id="content" class="col-md-10 panel col-center">
 						<!-- content will be rendered here -->
 						{{outlet}}
+					</div>
 				</div>
 			</div>
 		</script>
 
 		<!-- main page template -->
 		<script type="text/x-handlebars" data-template-name="main">
-			<p>Welcome to the Tufts Tap Ensemble website! We are the only dance group at Tufts devoted to tap dancing. Each semester, we stage
-				a show featuring a variety of pieces which are choreographed, taught, and performed by students. Our shows are open to Tufts
-				students and performed on campus. We are active within the Tufts dance community, guest-performing in shows for Sarabande,
-				BEATs, and the Amalgamates. We are also active in the greater Boston area and have performed with tappers from Boston
-				University, Brandeis, Harvard, and Wellesley.</p>
+			<div class="row">
+				<div class="col-md-12">
+					<p>Welcome to the Tufts Tap Ensemble website! We are the only dance group at Tufts devoted to tap dancing. Each semester, we stage
+						a show featuring a variety of pieces which are choreographed, taught, and performed by students. Our shows are open to Tufts
+						students and performed on campus. We are active within the Tufts dance community, guest-performing in shows for Sarabande,
+						BEATs, and the Amalgamates. We are also active in the greater Boston area and have performed with tappers from Boston
+						University, Brandeis, Harvard, and Wellesley.</p>
 
-			<p>Auditions for Tap Ensemble are held each semester. Prior tap experience is necessary to join, but we offer student-run
-				workshops for anyone who wishes to learn. If you have any questions about our group, contact the Tap Ensemble directly at
-				tuftstap [at] gmail [dot] com.</p>
+					<p>Auditions for Tap Ensemble are held each semester. Prior tap experience is necessary to join, but we offer student-run
+						workshops for anyone who wishes to learn. If you have any questions about our group, contact the Tap Ensemble directly at
+						tuftstap [at] gmail [dot] com.</p>
+				</div>
+			</div>
 		</script>
 
 		<script type="text/x-handlebars" data-template-name="members">
 			{{#each}}
 				{{openRow _view.contentIndex}}
-				<div class="col-md-3">
-					<img class="img-responsive" src={{unbound imageUrl}} alt={{unbound firstName}} /><br />
+					<div class="col-md-3">
+						<img class="img-responsive" src={{unbound imageUrl}} alt={{unbound firstName}} /><br />
 						<p><b>{{firstName}} {{lastName}}</b><br />
 							School of {{school}}<br />
 							Class of {{year}}<br />
@@ -79,7 +93,7 @@
 							Minor: {{minor}}<br />
 							{{/if}}
 						</p>
-				</div>
+					</div>
 				{{closeRow _view.contentIndex}}
 			{{/each}}
 		</script>
@@ -112,16 +126,17 @@
 
 		<script type="text/x-handlebars" data-template-name="video">
 			<div id="videoDiv"></div>
-			<script src="js/videos.js"></script>
-			<script src="https://apis.google.com/js/client.js?onload=onLoadCallback"></script>
+			<!-- <script src="js/videos.js"></script>
+			<script src="https://apis.google.com/js/client.js?onload=onLoadCallback"></script> -->
 		</script>
 
 		<!-- JavaScript Dependencies -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v2.0.0.js"></script>
+		<script src="js/lib/handlebars-v2.0.0.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-		<script src="http://builds.emberjs.com/release/ember.js"></script>
-		<script src="http://builds.emberjs.com/canary/ember-data.js"></script>
+		<script src="js/lib/ember-template-compiler.js"></script>
+		<script src="js/lib/ember.prod.js"></script>
+		<script src="js/lib/ember-data.prod.js"></script>
 		<!-- Local JavaScript -->
 		<script src="js/application.js"></script>
 		<script src="js/router.js"></script>

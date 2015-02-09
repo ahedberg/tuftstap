@@ -156,4 +156,26 @@ App.Alum.FIXTURES = [
 		minor: "",
 		sinceTufts: ""
 	},
+	{
+	id: 1,
+firstName: "Rachelle",
+lastName: "Alfred",
+year: 2015,
+school: "Arts & Sciences",
+imageUrl: "static/members/alfred.jpg",
+major: "Clinical Psychology",
+secondMajor: "Child Development",
+minor: ""
+},
+{
+		id: 9,
+	firstName: "Sara",
+	lastName: "Pantel",
+	year: 2015,
+	school: "Arts & Sciences",
+	imageUrl: "static/members/pantel.jpg",
+	major: "Spanish",
+	secondMajor: "Biology",
+	minor: ""
+},
 ];

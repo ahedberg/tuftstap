@@ -30,3 +30,9 @@ a:hover, a:active {
 .local-container {
 	margin: 2%;
 }
+
+.vcenter {
+		display: inline-block;
+		vertical-align: middle;
+		float: none;
+}
